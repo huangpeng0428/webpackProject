@@ -1,0 +1,14 @@
+///.babelrc
+{
+  "presets": [
+    "env",
+    "stage-0"
+  ],
+  "plugins": [
+    ["transform-runtime", {
+      "helpers": false, //建议为false
+      "polyfill": false, //是否切换新的内置插件（Promise，Set，Map等）为使用非全局污染的 polyfill，根据你的网站兼容性情况来看，开启会增加很多额外的代码
+      "regenerator": true //是否切换 generator 函数为不污染全局作用域的 regenerator runtime。
+    }],
+  ]
+}
